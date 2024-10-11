@@ -1,0 +1,75 @@
+//* Global
+
+$font-family-base: Montserrat, sans-serif;
+.playfair-font {
+  font-family: "Playfair Display", serif;
+}
+.max-width-body {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+//* Page HOME
+
+.main-nav a {
+  position: relative;
+}
+
+.main-nav a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: #f1f1f1;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.main-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.home-height {
+  padding-bottom: 20vw;
+}
+
+.sushi {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 60%;
+  transform: translate(0, -50%);
+}
+
+@media screen and (max-width: 992px) {
+  .sushi {
+    top: 65%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sushi {
+    top: 75%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .sushi {
+    display: none;
+  }
+  .home-height {
+    padding-bottom: 5vw;
+  }
+}
+
+//* Home Page - Chef Section
+
+.object-cover {
+  object-fit: cover;
+}
+
+.object-pos-top {
+  object-position: 50% 30%;
+}

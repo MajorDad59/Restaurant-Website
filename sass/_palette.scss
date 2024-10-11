@@ -1,0 +1,26 @@
+$dark-1: #3d3a4b;
+$beige: #eeebd0;
+$main-red: #c70a0a;
+$shade-red-1: #c33838;
+$shade-red-2: #ebb3a9;
+$shade-red-3: #e87ea1;
+
+$custom-theme-colors: (
+  "main-red": $main-red,
+  "shade-red-1": $shade-red-1,
+  "shade-red-2": $shade-red-2,
+  "shade-red-3": $shade-red-3,
+  "dark-1": $dark-1,
+  "beige": $beige,
+);
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+@each $key, $val in $custom-theme-colors {
+  .bg-#{$key} {
+    background-color: $val;
+  }
+  .text-#{$key} {
+    color: $val;
+  }
+}
